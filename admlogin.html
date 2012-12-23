@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<TITLE>P&aacute;gina de Informaci&oacute;n de <MM-List-Name></TITLE>
+	<link href="http://hackcoop.com.ar/css/listas.css" media="all" rel="stylesheet" type="text/css" />
+</HEAD>
+<BODY>
+	<div id="overview"></div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li>
+						<a href="/" >Listas</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="content" class="container">
+		<FORM METHOD=POST ACTION="%(path)s">
+			%(message)s
+			<h2>Autentificaci&oacute;n del %(who)s de %(listname)s</h2>
+			<INPUT TYPE="password" NAME="adminpw" SIZE="30">
+			<INPUT type="SUBMIT" name="admlogin" value="Con permiso...">
+			<div class="alert">
+				Clave del %(who)s de la lista
+			</div>
+		</FORM>
+	</div>
+	<footer>
+	</footer>
+</BODY>
+</HTML>	
+

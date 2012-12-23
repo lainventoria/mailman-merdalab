@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+    <TITLE>P&aacute;gina de Informaci&oacute;n de <MM-List-Name></TITLE>
+    <link href="http://hackcoop.com.ar/css/listas.css" media="all" rel="stylesheet" type="text/css" />
+  </HEAD>
+  <BODY>
+
+<div id="overview"></div>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav">
+				<li>
+					<a href="/" >Listas</a>
+				</li>
+			</ul>
+			<ul class="nav pull-right">
+				<li>
+					<a href="#subscribers" >Suscriptos</a>
+				</li>
+				<li>
+					<a href="/options/<MM-List-Name>" >Tu cuenta</a>
+				</li>
+				<li>
+					<a href="/admin/<MM-List-Name>" >Administración</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="content" class="container">
+	<ul class="breadcrumb">
+              <li><a href="date.html#%(sequence)s">Fecha</a><span class="divider">/</span></li>
+              <li><a href="thread.html#%(sequence)s">Hilo</a><span class="divider">/</span></li>
+              <li><a href="subject.html#%(sequence)s">Asunto</a><span class="divider">/</span></li>
+              <li><a href="author.html#%(sequence)s">Autor</a></li>
+       </ul>
+<!-- descripcion -->
+        <div class="hero-unit">
+                <h1><MM-List-Name></h1>
+                <p><MM-List-Description></p>
+                <MM-List-Info><MM-Restricted-List-Message>
+                Para enviar un mensaje a todos los miembros de la lista, env&iacute;elo 
+                a la direcci&oacute;n <A HREF="mailto:<MM-Posting-Addr>"><MM-Posting-Addr></A>.
+                <br />
+                <br />
+		<a href="%(listurl)s">M&aacute;s informaci&oacute;n</a> sobre la lista de distribuci&oacute;n %(listname)s 
+        </div>
+
+<!-- paginador -->
+
+	<ul class="pager">
+		<li class="previous">
+    			%(prev_wsubj)s
+		</li>
+		<li class="next">
+			%(next_wsubj)s
+		</li>
+	</ul>
+
+<!-- Article -->
+
+   <H1>%(subject_html)s </H1>
+   <b>%(author_html)s</b> 
+   <a HREF="mailto:%(email_url)s?Subject=%(subject_url)s&In-Reply-To=%(in_reply_to_url)s" TITLE="%(subject_html)s">%(email_html)s</a>
+   <i>%(datestr_html)s</i>
+
+<!--beginarticle-->
+<div class="bs-docs-example" >
+%(body)s
+</div>
+<!--endarticle-->
+
+<!-- paginador -->
+	<ul class="pager">
+		<li class="previous">
+    			%(prev_wsubj)s
+		</li>
+		<li class="next">
+			%(next_wsubj)s
+		</li>
+	</ul>
+
+		<ul class="breadcrumb">
+  	            <li><a href="date.html#%(sequence)s">Fecha</a><span class="divider">/</span></li>
+  	            <li><a href="thread.html#%(sequence)s">Hilo</a><span class="divider">/</span></li>
+  	            <li><a href="subject.html#%(sequence)s">Asunto</a><span class="divider">/</span></li>
+  	            <li><a href="author.html#%(sequence)s">Autor</a></li>
+       		</ul>
+	</div>
+</BODY>
+</HTML>	

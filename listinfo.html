@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+    <TITLE>P&aacute;gina de Informaci&oacute;n de <MM-List-Name></TITLE>  
+    <link href="http://hackcoop.com.ar/css/listas.css" media="all" rel="stylesheet" type="text/css" />
+  </HEAD>
+  <BODY>
+
+<div id="overview"></div>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav">
+				<li>
+					<a href="/" >Listas</a>
+				</li>
+			</ul>
+			<ul class="nav pull-right">
+				<li>
+					<a href="/listinfo/<MM-List-Name>#subscribers" >Suscriptos</a>
+				</li>
+				<li>
+					<a href="/options/<MM-List-Name>" >Tu cuenta</a>
+				</li>
+				<li>
+					<a href="/admin/<MM-List-Name>" >Administraci&oacute;n</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="content" class="container">
+
+<!-- descripcion -->
+	<div class="hero-unit">
+		<h1><MM-List-Name></h1>
+		<p><MM-List-Description></p>
+		<MM-List-Info><MM-Restricted-List-Message>
+		Para enviar un mensaje a todos los miembros de la lista, env&iacute;elo a la direcci&oacute;n <A HREF="mailto:<MM-Posting-Addr>"><MM-Posting-Addr></A>.
+		<br />
+		<br />
+		Para ver env&iacute;os anteriores a la lista, puede visitar los archivos de <MM-Archive><MM-List-Name></MM-Archive>.
+	</div>
+
+<!-- Suscripcion -->
+<h1>¡Suscribite a <MM-List-Name>!</h1>
+<div class="row">
+	<div class="span5">
+		<form Method=POST ACTION="../subscribe/<MM-List-Name>" class="form-horizontal">
+			<div class="control-group">
+			    <label class="control-label" for="email">Correo</label>
+			    	<div class="controls">
+					<input type="Text" name="email" size="30" value="" placeholder="Correo" />
+				</div>
+			    <label class="control-label" for="fullname">Sobrenombre</label>
+			    	<div class="controls">
+					<input type="Text" name="fullname" size="30" value="" placeholder="Sobrenombre" />
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="pw">Clave</label>
+			    	<div class="controls">
+					<input type="Password" name="pw" size="15" placeholder="Clave" />
+				</div>
+			   	<label class="control-label" for="pw">Confirmar</label>
+			    		<div class="controls">
+						<input type="Password" name="pw-conf" size="15" placeholder="Clave" />
+						<input type="hidden" name="digest" value="0" CHECKED />
+					</div>
+				</div>
+				<div class="control-group">
+				    	<div class="controls">
+						<INPUT type="Submit" name="email-button" value="Subscribir" class="btn">
+					</div>
+				</div>
+			</form>
+			</div>
+			<div class="span6 well">
+				Suscr&iacute;base a <b><MM-List-Name></b> rellenando los datos del siguiente formulario
+				<MM-List-Subscription-Msg>
+			</div>
+		</div>
+		<hr />
+			<!-- Si ya tenes cuenta -->
+			<a name="subscribers"></a>
+			<h2>Suscriptores de <MM-List-Name></h2>
+			<MM-Roster-Form-Start>
+				<MM-Roster-Option>
+			<MM-Form-End>
+		</div>
+		<footer>
+		</footer>
+	</BODY>
+</HTML>	

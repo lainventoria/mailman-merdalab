@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+    <TITLE>P&aacute;gina de Informaci&oacute;n de <MM-List-Name></TITLE>
+    <link href="http://hackcoop.com.ar/css/listas.css" media="all" rel="stylesheet" type="text/css" />
+  </HEAD>
+  <BODY>
+
+<div id="overview"></div>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav">
+				<li>
+					<a href="/" >Listas</a>
+				</li>
+			</ul>
+			<ul class="nav pull-right">
+				<li>
+					<a href="#subscribers" >Suscriptos</a>
+				</li>
+				<li>
+					<a href="/options/<MM-List-Name>" >Tu cuenta</a>
+				</li>
+				<li>
+					<a href="/admin/<MM-List-Name>" >Administración</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="content" class="container">
+<!-- descripcion -->
+        <div class="hero-unit">
+		<h1><MM-List-Name> </h1>
+                <p>Resultados de la subscripci&oacute;n</p>
+                <MM-List-Info><MM-Restricted-List-Message>
+                Para enviar un mensaje a todos los miembros de la lista, env&iacute;elo 
+                a la direcci&oacute;n <A HREF="mailto:<MM-Posting-Addr>"><MM-Posting-Addr></A>.
+                <br />
+                <br />
+                Para ver env&iacute;os anteriores a la lista, puede visitar los archivos de <MM-Archive><MM-List-Name></MM-Archive>.
+        </div>
+		<!-- Resultados -->
+		<MM-Results>
+	</div>
+
+		<footer>
+		</footer>
+	</BODY>
+</HTML>	
