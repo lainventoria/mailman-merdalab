@@ -1,11 +1,12 @@
-#Mailman-merdalab
+#Mailman merdalab
 
-Un tema para Mailman basado en [bootstrap](http://twitter.github.com/bootstrap)
+Un tema para Mailman basado en [bootstrap](http://twitter.github.com/bootstrap) 
+pensado para usarlo en la lista de [hackcoop](http://hackcoop.com.ar/)	
 
-![Bla](http://ompldr.org/vZ3QxcA/bla.png)
+![Bla con Mailman merdalab](http://ompldr.org/vZ3QxcA/bla.png)
 
-#Quehaceres
+##Quehaceres
 
-- Mejorar la aplicación
+- Mejorar la aplicación del tema
 - Crear un template base que autogenere los html
-- Cambiar temas basados en el **cgi**
+- Cambiar temas basados en el **cgi** o metidos en el codigo
