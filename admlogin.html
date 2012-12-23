@@ -1,37 +1,62 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="es">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
-	<TITLE>P&aacute;gina de Informaci&oacute;n de <MM-List-Name></TITLE>
-	<link href="http://hackcoop.com.ar/css/listas.css" media="all" rel="stylesheet" type="text/css" />
-</HEAD>
-<BODY>
-	<div id="overview"></div>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<ul class="nav">
-					<li>
-						<a href="/" >Listas</a>
-					</li>
-				</ul>
-			</div>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+    <TITLE>P&aacute;gina de Informaci&oacute;n de <MM-List-Name></TITLE>
+    <link href="http://hackcoop.com.ar/css/listas.css" media="all" rel="stylesheet" type="text/css" />
+  </HEAD>
+  <BODY>
+
+<div id="overview"></div>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav">
+				<li>
+					<a href="/" >Listas</a>
+				</li>
+			</ul>
+			<ul class="nav pull-right">
+				<li>
+					<a href="#subscribers" >Suscriptos</a>
+				</li>
+				<li>
+					<a href="/options/<MM-List-Name>" >Tu cuenta</a>
+				</li>
+				<li>
+					<a href="/admin/<MM-List-Name>" >Administración</a>
+				</li>
+			</ul>
 		</div>
 	</div>
-	<div id="content" class="container">
-		<FORM METHOD=POST ACTION="%(path)s">
-			%(message)s
-			<h2>Autentificaci&oacute;n del %(who)s de %(listname)s</h2>
-			<INPUT TYPE="password" NAME="adminpw" SIZE="30">
-			<INPUT type="SUBMIT" name="admlogin" value="Con permiso...">
-			<div class="alert">
-				Clave del %(who)s de la lista
-			</div>
-		</FORM>
-	</div>
-	<footer>
-	</footer>
-</BODY>
-</HTML>	
+</div>
 
+<div id="content" class="container">
+<!-- descripcion -->
+        <div class="hero-unit">
+		<h1>Autentificaci&oacute;n</h1>
+		<p>del %(who)s de %(listname)s</p>
+		%(message)s
+        </div>
+	<!-- private -->
+	<center>
+	<form METHOD=POST ACTION="%(action)s" class="form-inline">
+		<div class="input-prepend">
+			<span class="add-on">Direcci&oacute;n:</span>
+			<input TYPE="text" NAME="username" class="span2" placeholder="Correo" />	
+		</div>
+		<div class="input-prepend input-append">
+			<span class="add-on">Clave</span>
+			<input TYPE="password" class="span2" NAME="adminpw" placeholder="Clave" />
+			<button type="SUBMIT" name="admlogin" class="btn" />Con permiso...</button>
+		</div>
+	</FORM>
+	</center>
+</div>
+
+		<footer>
+		</footer>
+	</BODY>
+</HTML>	
