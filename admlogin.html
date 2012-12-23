@@ -26,7 +26,7 @@
 					<a href="/options/<MM-List-Name>" >Tu cuenta</a>
 				</li>
 				<li>
-					<a href="/admin/<MM-List-Name>" >Administración</a>
+					<a href="/admin/<MM-List-Name>" >Administraci&oacoute;n</a>
 				</li>
 			</ul>
 		</div>
@@ -42,11 +42,7 @@
         </div>
 	<!-- private -->
 	<center>
-	<form METHOD=POST ACTION="%(action)s" class="form-inline">
-		<div class="input-prepend">
-			<span class="add-on">Direcci&oacute;n:</span>
-			<input TYPE="text" NAME="username" class="span2" placeholder="Correo" />	
-		</div>
+	<form METHOD="POST" ACTION="%(path)s" class="form-inline">
 		<div class="input-prepend input-append">
 			<span class="add-on">Clave</span>
 			<input TYPE="password" class="span2" NAME="adminpw" placeholder="Clave" />
