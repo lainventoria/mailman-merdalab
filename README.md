@@ -6,5 +6,6 @@ Un tema para Mailman basado en [bootstrap](http://twitter.github.com/bootstrap)
 
 #Quehaceres
 
-- Mejorar aplicación
+- Mejorar la aplicación
+- Crear un template base que autogenere los html
 - Cambiar temas basados en el **cgi**
